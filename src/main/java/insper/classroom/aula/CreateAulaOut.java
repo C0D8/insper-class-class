@@ -1,12 +1,13 @@
-package insper.classroom.auth;
+package insper.classroom.aula;
 
 import lombok.Builder;
 import lombok.experimental.Accessors;
 
+
 @Builder
 @Accessors(fluent = true, chain = true)
-public record LoginOut (
-  String token
-) {
+public record CreateAulaOut (
+    String id
+){
     
 }
