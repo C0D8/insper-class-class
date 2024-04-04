@@ -8,18 +8,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient("classroom-aula")
 public interface AulaController {
 
-    @PostMapping("/auth/register")
+    @PostMapping("/aula/register")
     ResponseEntity<?> create (
-        @RequestBody(required = true) RegisterIn in
+        @RequestBody(required = true) CreateAulaIn in
     );
 
-    @PostMapping("/auth/login")
-    ResponseEntity<LoginOut> authenticate (
-        @RequestBody(required = true) CredentialIn in
+    @GetMapping("aula/{id}")
+    ResponseEntity<?> get (
+        @PathVariable(required = true) String id
     );
-
-    @PostMapping("/auth/solve")
-    ResponseEntity<SolveOut> solve (
-        @RequestBody(required = true) SolveIn in
-    );
+    
+   
 }
