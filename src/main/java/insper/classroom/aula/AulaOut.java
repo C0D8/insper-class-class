@@ -8,12 +8,11 @@ import java.util.Date;
 
 @Builder
 @Accessors(fluent = true, chain = true)
-public record CreateAulaIn (
+public record AulaOut (
     Date data,
     String duracao,
-    String descricao,
-    String nome,
-    String id_professor
+    String nome
+
 ) {
     
 }
