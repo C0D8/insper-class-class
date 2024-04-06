@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient("classroom-aula")
 public interface AulaController {
 
-    @PostMapping("/aula/register")
+    @PostMapping("/aulas/register")
     ResponseEntity<?> create (
         @RequestBody(required = true) CreateAulaIn in
     );
 
-    @GetMapping("aula/{id}")
+    @GetMapping("aulas/{id}")
     ResponseEntity<?> get (
         @PathVariable(required = true) String id
         
