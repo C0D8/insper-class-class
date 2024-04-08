@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import java.util.List;
 
 @FeignClient("classroom-aula")
 public interface AulaController {
@@ -22,7 +23,7 @@ public interface AulaController {
     );
 
     @GetMapping("aulas/departamento/{id}")
-    ResponseEntity<?> getByDepartamento (
+    ResponseEntity<List<CreateAulaOut>> getByDepartamento (
         @PathVariable(required = true) String id
     );
     
