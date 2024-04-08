@@ -20,6 +20,11 @@ public interface AulaController {
         @PathVariable(required = true) String id
         
     );
+
+    @GetMapping("aulas/departamento/{id}")
+    ResponseEntity<?> getByDepartamento (
+        @PathVariable(required = true) String id
+    );
     
    
 }
